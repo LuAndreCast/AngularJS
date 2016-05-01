@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task Manager</title>
+
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- angular -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="taskApp">
+
+	<div ng-controller="tasksController">
+		<div class="row">
+	    	<div class="container">
+	    		<div class="col-md-12">
+	    			<div ng-include src="'tasks.html'"></div>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+
+
+	<!-- js -->
+    <script src="app.js"></script>
+    <script src="tasksController.js"></script>
+
+</body>
+</html>

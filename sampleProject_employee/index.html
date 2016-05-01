@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee - Add or View </title>
+
+		<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- angular -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+</head>
+<body ng-app="empApp">
+
+<div ng-controller="employeeController">
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<div ng-show="status">
+				{{status}}
+				<br />
+				<br />
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+	
+	<!-- inserting employee -->
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<h1>Add Employee</h1>
+			<form>
+				Employee No# <input type="text" name="employeeNo" ng-model="empno"/> <br/>
+				First Name <input type="text" name="firstName" ng-model="fname"/> <br/>
+				Last Name <input type="text" name="lastName" ng-model="lname"/> <br/>
+				Department <input type="text" name="dept" ng-model="dept"/> <br/>
+				<input type="button" value="submit" ng-click="insertData()">
+			</form>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+
+	<!-- list of employees -->
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10"  ng-show="employees">
+			<br />
+			<br />
+			<h1>Employees</h1>
+			<table class="table table-bordered">
+				<tr>
+					<th>Employee No.</th>
+					<th>First Name</th>
+					<th>Second Name</th>
+					<th>Department</th>
+				</tr>
+				<tbody>
+					<tr ng-repeat="employee in employees">
+						<td>{{ employee.emp_no }}</td>
+						<td>{{ employee.first_name }}</td>
+						<td>{{ employee.last_name }}</td>
+						<td>{{ employee.dept_name }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+
+
+
+</div>
+<!-- eo employee -->
+
+
+
+	<!-- js -->
+    <script src="app.js"></script>
+    <script src="employeeController.js"></script>
+
+</body>
+</html>
