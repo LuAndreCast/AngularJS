@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="loginApp">
+<head>
+
+    <title>AngulasJS Login with PHP Session</title>
+  <!-- SCROLLS -->
+  <!-- load bootstrap and fontawesome via CDN -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+</head>
+<body>
+
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Some Cool Logo Here</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-home"></i> Login</a></li>
+                <li><a href="#home"><i class="fa fa-comment"></i> Home</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+
+    <div ng-view></div>
+
+  <!-- load angular and angular route via CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers/loginController.js"></script>
+  <script src="js/directives/loginDirective.js"></script>
+  <script src="js/services/loginService.js"></script>
+  <script src="js/controllers/homeController.js"></script>
+  <script src="js/services/sessionService.js"></script>
+
+</body>
+</html>

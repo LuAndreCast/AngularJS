@@ -11,7 +11,7 @@ app.controller( 'employeeController'  , function($scope,$http){
 		.success( function(data,status,headers,config){
 		
 			$scope.status = "Successfully Entered";
-			clearFields();		
+			clearFields();
 
 			//pulls new data
 		    getData();
@@ -32,7 +32,7 @@ app.controller( 'employeeController'  , function($scope,$http){
 
     //retrieves all employees
     function getData(){
-		$http.post("getEmployees.php" , { 'empno':$scope.empno,'fname':$scope.fname,'lname':$scope.lname, 'dept':$scope.dept })
+		$http.post("getEmployees.php" , { })
 		.success( function(data,status,headers,config){
 		
 			if (data.length > 0) 
